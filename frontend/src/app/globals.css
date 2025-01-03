@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #4A90E2;
+  --secondary: #6B48FF;
+  --dark: #1A1A2E;
+  --light: #F5F6FA;
+}
+
+body {
+  background: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navbar {
+  @apply px-4 sm:px-8 py-4 fixed w-full top-0 z-50;
+  background: linear-gradient(to bottom, rgba(26, 26, 46, 0.95), rgba(26, 26, 46, 0.8));
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  @apply text-xl sm:text-2xl font-bold flex items-baseline gap-2;
+  color: var(--primary);
+}
+
+.logo-by {
+  @apply text-xs sm:text-sm opacity-70;
+  color: var(--light);
+}
+
+.hero {
+  @apply relative min-h-screen flex flex-col items-center justify-start overflow-hidden;
+  background: radial-gradient(circle at 50% 0%, rgba(74, 144, 226, 0.12), transparent 60%),
+              linear-gradient(180deg, var(--dark) 0%, #1a1a2e 100%);
+}
+
+.hero-content {
+  @apply w-full max-w-[1200px] mx-auto px-4 sm:px-8 pt-32 sm:pt-40 pb-16;
+}
+
+.hero-title {
+  @apply text-2xl sm:text-4xl font-bold text-center mb-3 sm:mb-4;
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.7));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  @apply text-sm sm:text-lg text-center mb-12 sm:mb-16 max-w-2xl mx-auto text-gray-400;
+}
+
+.products-grid {
+  @apply grid w-full max-w-[1200px] mx-auto px-3 sm:px-4;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@screen sm {
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+.product-card {
+  @apply bg-white/[0.03] hover:bg-white/[0.05] rounded-xl p-5 backdrop-blur-sm transition-all duration-300 w-full;
+  min-height: 16rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.product-card h2 {
+  @apply text-lg sm:text-xl font-bold mb-3;
+}
+
+.product-card p {
+  @apply text-sm sm:text-base mb-4 text-gray-400;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.active-product {
+  @apply border-2;
+  border-color: var(--primary);
+}
+
+.coming-soon {
+  @apply opacity-90 relative;
+}
+
+.coming-soon::after {
+  content: 'Coming Soon';
+  @apply absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-medium;
+  background: var(--secondary);
+}
+
+.btn {
+  @apply px-5 py-2 sm:px-6 sm:py-2.5 rounded-full border-none cursor-pointer transition-all duration-300 inline-block mt-4 text-white text-sm font-medium;
+  background: var(--primary);
+}
+
+.btn:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+}
