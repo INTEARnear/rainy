@@ -17,10 +17,6 @@ export const products: Product[] = [
         description: 'WebSocket API for backend and frontend',
         features: [
             {
-                name: '99% Uptime SLA',
-                description: 'We guarantee 99% uptime for your WebSocket connections, and refund 50% of the monthly fee if we fail to deliver.'
-            },
-            {
                 name: 'Server-side JSON filtering',
                 description: 'Filter your WebSocket messages on the server side using JSON path expressions to reduce bandwidth and processing on the client.'
             },
