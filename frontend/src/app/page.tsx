@@ -19,7 +19,7 @@ export default function Home() {
           </h1>
           <p className="hero-subtitle">
             Build scalable real-time applications with our suite of cloud services.
-            From WebSocket APIs to AI agents, we've got everything you need.
+            From WebSocket APIs to AI agents, we&apos;ve got everything you need.
           </p>
 
           <div className="products-grid">
