@@ -15,7 +15,7 @@ export default function Home() {
       <div className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Cloud Infrastructure for Real-time Applications
+            When the cloud cries.
           </h1>
           <p className="hero-subtitle">
             Build scalable real-time applications with our suite of cloud services.
